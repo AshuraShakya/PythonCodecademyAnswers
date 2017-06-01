@@ -1,24 +1,27 @@
 lloyd = {
     "name": "Lloyd",
-    "homework": [90,97,75,92],
-    "quizzes": [88,40,94],
-    "tests": [75,90]
+    "homework": [90.0, 97.0, 75.0, 92.0],
+    "quizzes": [88.0, 40.0, 94.0],
+    "tests": [75.0, 90.0]
 }
 alice = {
     "name": "Alice",
-    "homework": [100,92,98,100],
-    "quizzes": [82,83,91],
-    "tests": [89,97]
+    "homework": [100.0, 92.0, 98.0, 100.0],
+    "quizzes": [82.0, 83.0, 91.0],
+    "tests": [89.0, 97.0]
 }
 tyler = {
     "name": "Tyler",
-    "homework": [0,87,75,22],
-    "quizzes": [0,75,78],
-    "tests": [100,100]
+    "homework": [0.0, 87.0, 75.0, 22.0],
+    "quizzes": [0.0, 75.0, 78.0],
+    "tests": [100.0, 100.0]
 }
-students=[lloyd,alice,tyler]
+
+students = [lloyd, alice, tyler]
+
 for student in students:
-        print student['name']
-        print student['homework']
-        print student['quizzes']
-        print student['tests']
+    print student["name"]
+    print student["homework"]
+    print student["quizzes"]
+    print student["tests"]
+    print
