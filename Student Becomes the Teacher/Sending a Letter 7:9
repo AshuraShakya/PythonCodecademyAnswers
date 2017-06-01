@@ -21,22 +21,14 @@ tyler = {
 def average(numbers):
     total = sum(numbers)
     total = float(total)
-    return total / len(numbers)\
+    total = total / len(numbers)
+    return total
 
 def get_average(student):
-    h = average(student["homework"])
-    q = average(student["quizzes"])
-    t = average(student["tests"])
-    aver = (h * 0.1) + (q * 0.3) + (t * 0.6)
-    return aver
-students = [lloyd, alice, tyler]
-
-def get_class_average(classlist):
-    results=[]
-    for student in classlist:
-        result = get_average(student)
-        results.append(result)
-    return average(results)
+    homework = average(student["homework"])
+    quizzes = average(student["quizzes"])
+    tests = average(student["tests"])
+    return 0.1 * homework + 0.3 * quizzes + 0.6 * tests
 
 def get_letter_grade(score):
     if score >= 90:
@@ -50,6 +42,10 @@ def get_letter_grade(score):
     else:
         return "F"
 
+lloyd_grade = get_letter_grade(get_average(lloyd))
+alice_grade = get_letter_grade(get_average(alice))
+tyler_grade = get_letter_grade(get_average(tyler))
 
-print get_class_average(students)
-print get_letter_grade(get_class_average(students))
+print "The grade of %s is %s" % (lloyd["name"] ,lloyd_grade)
+print "The grade of %s is %s" % (alice["name"] ,alice_grade)
+print "The grade of %s is %s" % (tyler["name"] ,tyler_grade)
